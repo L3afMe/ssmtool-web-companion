@@ -6,20 +6,16 @@
   "homepage_url": "https://github.com/FreeLanguageTools/ssmtool",
 
   "icons": {
-      "48": "icons/clipboard-48.png"
+      "48": "icons/ssmtool-48.png"
   },
   "permissions": [
     "activeTab"
   ],
-
   "browser_action": {
     "browser_style": true,
     "default_popup": "menu.html",
     "default_icon": {
-      "48": "icons/clipboard-48.png"
+      "48": "icons/ssmtool-48.png"
     }
-  },
-  "background": {
-    "service_worker": "background.js"
   }
 }
