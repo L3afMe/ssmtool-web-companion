@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Click Copy Sentence",
+  "description": "Automatically copy the current sentence upon clicking on a word. Intended as a companion app to FreeLanguageTools/ssmtool.",
+  "version": "1.0",
+  "homepage_url": "https://github.com/FreeLanguageTools/ssmtool",
+
+  "icons": {
+      "48": "icons/clipboard-48.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "menu.html",
+    "default_icon": {
+      "48": "icons/clipboard-48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
