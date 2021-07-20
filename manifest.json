@@ -9,7 +9,20 @@
       "48": "icons/ssmtool-64.png"
   },
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "jquery-3.6.0.min.js",
+        "content-script.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ],
+      "run_at": "document_start"
+    }
   ],
   "browser_action": {
     "browser_style": true,

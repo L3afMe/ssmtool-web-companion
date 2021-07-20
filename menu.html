@@ -4,16 +4,26 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="menu.css"/>
-  </head>
+    <script>
+      let convertPage = () => {
+        let enabled = document.getElementById("enabled").checked;
+        chrome.storage.sync.set({enableSSM: enabled}, () => {});
+        console.log("set");
+      };
 
+      chrome.storage.sync.get(['enableSSM'], res => {
+        document.getElementById("enabled").checked = res.enableSSM;
+      });
+    </script>
+  </head>
 <body>
-    <div class="master">
+  <div class="master">
     <h3>click-copy-sentence</h3>
     <label class="switch">
-        <input type="checkbox" id="enabled" onclick="convertPage()">
-        <span class="slider round"></span>
-      </label>
-    </div>
+      <input type="checkbox" id="enabled" onclick="convertPage()">
+      <span class="slider round"></span>
+    </label>
+  </div>
 </body>
 
 </html>
